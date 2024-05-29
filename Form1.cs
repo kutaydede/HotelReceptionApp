@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HotelApp.BLL;
+using System;
 using System.Windows.Forms;
 
 namespace HotelReceptionApp
@@ -15,6 +9,22 @@ namespace HotelReceptionApp
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ResepsiyonistBL resepsiyonistBL = new ResepsiyonistBL();
+            bool result = true;//resepsiyonistBL.ResepsiyonistGiris(txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtSifre.Text.Trim());
+            if (result)
+            {
+                var frm = new FormHome(this);
+                frm.Show();
+                this.Hide(); // Form1'i gizle
+            }
+            else
+            {
+                MessageBox.Show("Giriş başarısız. Lütfen bilgilerinizi kontrol edin.");
+            }
         }
     }
 }
