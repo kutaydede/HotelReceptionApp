@@ -63,7 +63,7 @@ namespace HotelReceptionApp
                 button.Height = buttonHeight;
                 button.Left = x;
                 button.Top = y;
-                button.BackColor = oda.DoluMu ? Color.Red : Color.Green;
+                button.BackColor = oda.DoluMu ? Color.Red : Color.LightGreen;
                 button.Click += (s, e) => RoomButton_Click(s, e, oda);
 
                 this.Controls.Add(button);

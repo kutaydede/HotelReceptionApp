@@ -14,10 +14,10 @@ namespace HotelReceptionApp
         private void button1_Click(object sender, EventArgs e)
         {
             ResepsiyonistBL resepsiyonistBL = new ResepsiyonistBL();
-            bool result = true;//resepsiyonistBL.ResepsiyonistGiris(txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtSifre.Text.Trim());
+            bool result =  resepsiyonistBL.ResepsiyonistGiris(txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtSifre.Text.Trim());
             if (result)
             {
-                var frm = new FormHome(this);
+                var frm = new Form2(this);
                 frm.Show();
                 this.Hide(); // Form1'i gizle
             }

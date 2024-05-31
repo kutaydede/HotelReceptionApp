@@ -12,7 +12,7 @@ namespace DAL
         string cstr = ConfigurationManager.ConnectionStrings["cstr"].ConnectionString;
 
         private static Helper hlp;
-        private Helper() { }
+        private Helper() { cn = new SqlConnection(cstr); }
         static int sayac = 0;
 
         public static Helper helper

@@ -5,6 +5,7 @@ namespace HotelApp.MODEL
     public class Misafir
     {
         public int MisafirID { get; set; }
+        public string MisafirTc { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string TelefonNumarasi { get; set; }
